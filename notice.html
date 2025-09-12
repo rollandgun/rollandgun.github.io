@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RNG 공지사항</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+        
+        .notice-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #4ecdc4;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .notice-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .notice-date {
+            color: #4ecdc4;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        
+        .notice-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        
+        .notice-content {
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+        
+        .notice-content p {
+            margin-bottom: 10px;
+        }
+        
+        .notice-content ul {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .notice-content li {
+            margin-bottom: 5px;
+        }
+        
+        .highlight {
+            background: rgba(255, 107, 107, 0.2);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        
+        .update-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            opacity: 0.7;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .notice-item {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎮 RNG 공지사항</h1>
+            <p>최신 업데이트와 이벤트 소식을 확인하세요</p>
+        </div>
+        
+        <div class="notice-item">
+            <div class="notice-date">2024.01.15</div>
+            <div class="notice-title">
+                🎉 신규 업데이트 v1.2.0 출시
+                <span class="update-badge">NEW</span>
+            </div>
+            <div class="notice-content">
+                <p>안녕하세요, RNG 개발팀입니다!</p>
+                <p>새로운 업데이트가 출시되었습니다. 주요 변경사항은 다음과 같습니다:</p>
+                <ul>
+                    <li>새로운 무기 <span class="highlight">플라즈마 라이플</span> 추가</li>
+                    <li>맵 시스템 개선 및 새로운 지역 추가</li>
+                    <li>게임 밸런스 조정</li>
+                    <li>버그 수정 및 성능 최적화</li>
+                </ul>
+                <p>자세한 내용은 게임 내에서 확인하실 수 있습니다.</p>
+            </div>
+        </div>
+        
+        <div class="notice-item">
+            <div class="notice-date">2024.01.10</div>
+            <div class="notice-title">🏆 1월 토너먼트 이벤트</div>
+            <div class="notice-content">
+                <p>1월 한정 토너먼트 이벤트가 시작됩니다!</p>
+                <p><span class="highlight">이벤트 기간:</span> 2024.01.15 ~ 2024.01.31</p>
+                <p><span class="highlight">참여 방법:</span> 게임 내 토너먼트 모드에서 참여</p>
+                <p>우승자에게는 특별한 보상이 지급됩니다. 많은 참여 부탁드립니다!</p>
+            </div>
+        </div>
+        
+        <div class="notice-item">
+            <div class="notice-date">2024.01.05</div>
+            <div class="notice-title">🔧 서버 점검 안내</div>
+            <div class="notice-content">
+                <p>서버 안정성 향상을 위한 점검이 예정되어 있습니다.</p>
+                <p><span class="highlight">점검 시간:</span> 2024.01.08 02:00 ~ 04:00 (KST)</p>
+                <p>점검 중에는 게임 이용이 불가능합니다. 양해 부탁드립니다.</p>
+            </div>
+        </div>
+        
+        <div class="notice-item">
+            <div class="notice-date">2024.01.01</div>
+            <div class="notice-title">🎊 신년 이벤트 종료 안내</div>
+            <div class="notice-content">
+                <p>신년 이벤트가 성공적으로 마무리되었습니다.</p>
+                <p>많은 분들이 참여해주셔서 감사합니다. 다음 이벤트도 기대해주세요!</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2024 RNG. All rights reserved.</p>
+            <p>문의사항이 있으시면 언제든 연락주세요.</p>
+        </div>
+    </div>
+</body>
+</html>
