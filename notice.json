@@ -1,5 +1,5 @@
 {
-    "content": "🎮 새로운 업데이트가 출시되었습니다!\n\n- 새로운 무기 추가\n- 버그 수정\n- 성능 개선\n\n자세한 내용은 공식 사이트를 확인해주세요!",
+    "content": "Welcome to the Roll and Gun!\n\nCurrently it's in alpha, and we're preparing many more features to add!\n\nIf you have any suggestion, bug, etc, freely join the discord and let us know!",
     "showDuringLobby": true,
     "hideDuringPlay": true,
     "enabled": true
