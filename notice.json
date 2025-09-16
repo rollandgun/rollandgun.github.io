@@ -1,6 +1,4 @@
 {
     "content": "Welcome to the Roll and Gun!\n\nCurrently it's in alpha, and we're preparing many more features to add!\n\nIf you have any suggestion, bug, etc, freely join the discord and let us know!",
-    "showDuringLobby": true,
-    "hideDuringPlay": true,
     "enabled": true
 }
