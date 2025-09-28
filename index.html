@@ -25,7 +25,7 @@
         .header {
             text-align: center;
             padding-bottom: 12px;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         .header h1 {
@@ -53,13 +53,13 @@
 
         .notice-date {
             color: #4ecdc4;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             font-weight: 500;
             margin-bottom: 10px;
         }
 
         .notice-title {
-            font-size: 1.3rem;
+            font-size: 1.05rem;
             font-weight: 600;
             margin-bottom: 10px;
             color: #fff;
@@ -72,6 +72,7 @@
 
         .notice-content p {
             margin-bottom: 10px;
+            font-size: 0.9rem;
         }
 
         .highlight {
@@ -90,6 +91,24 @@
         a:hover,
         a:focus {
             color: #38b6a8;
+        }
+
+        @media (max-width: 240px) {
+            .container {
+                padding: 8px;
+            }
+            .notice-item {
+                padding: 8px;
+            }
+            .notice-title {
+                font-size: 0.8rem;
+            }
+            .notice-date {
+                font-size: 0.6rem;
+            }
+            .notice-content p {
+                font-size: 0.7rem;
+            }
         }
     </style>
 </head>
