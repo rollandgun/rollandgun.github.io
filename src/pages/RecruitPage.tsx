@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
-import { Mail, Video, Users, Sparkles, Shield, Heart, Gamepad2, ExternalLink } from 'lucide-react'
+import { Mail, Video, Users, Sparkles, Shield, Heart, Gamepad2, ExternalLink, MessageCircle } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import logo from '@/assets/logo.png'
@@ -53,7 +53,7 @@ export default function RecruitPage() {
           <nav className="ml-auto hidden md:flex gap-6 text-sm">
             <a href="#about" className="hover:underline">소개</a>
             <a href="#video" className="hover:underline">영상</a>
-            <a href="#timeline" className="hover:underline">마일스톤</a>
+            <a href="#timeline" className="hover:underline">로드맵 & 마일스톤</a>
             <a href="#hiring" className="hover:underline">구인</a>
           </nav>
         </div>
@@ -173,7 +173,7 @@ export default function RecruitPage() {
       <Section
         id="timeline"
         title="로드맵 & 마일스톤"
-        subtitle="핵심 기능 → 수익화 → 스팀 출시까지 빠르게 이어갑니다"
+        subtitle="핵심 기능 → 수익화 → 스팀 출시까지 빠르게 이어갑니다. 그 외 공모전 참여 등도 고려하고 있습니다."
       >
         <div className="grid md:grid-cols-4 gap-6 text-sm">
           {/* M1: 팀전 */}
@@ -217,10 +217,7 @@ export default function RecruitPage() {
             <CardHeader><CardTitle>M4 · 스팀 출시</CardTitle></CardHeader>
             <CardContent>
               <ul className="list-disc pl-5 space-y-1 text-muted-foreground">
-                <li>Steamworks: 빌드/디포/브랜치, 성과·클라우드(선택)</li>
-                <li>스토어 에셋: 캡슐/스크린샷/트레일러/설명</li>
-                <li>플레이테스트/비공개 베타, 크래시/텔레메트리</li>
-                <li>심사·세금/서류, 출시 체크리스트</li>
+                <li>PC 플랫폼 빌드</li>
               </ul>
             </CardContent>
           </Card>
@@ -262,11 +259,36 @@ export default function RecruitPage() {
           <Card>
             <CardHeader><CardTitle>지원</CardTitle></CardHeader>
             <CardContent className="flex flex-col gap-3">
-              <div className="flex gap-2">
+              {/* <div className="flex gap-2">
                 <Input type="email" placeholder="이메일 주소" value={email} onChange={(e) => setEmail(e.target.value)} />
                 <Button asChild><a href="mailto:rkdrnf@gmail.com?subject=%5B지원%5D%20디자인%20포지션"><Mail className="mr-2 h-4 w-4" />이메일</a></Button>
               </div>
-              <p className="text-xs text-muted-foreground">포트폴리오 링크와 포지션을 함께 보내주세요.</p>
+              <p className="text-xs text-muted-foreground">포트폴리오 링크와 포지션을 함께 보내주세요.</p> */}
+              <div className="flex flex-wrap gap-2">
+                {/* email */}
+                <Button asChild aria-label="디자이너 지원 메일 보내기">
+                  <a
+                    href={`mailto:rkdrnf@gmail.com?subject=${encodeURIComponent('[지원] 디자인 포지션')}&body=${encodeURIComponent(
+                      `
+[포트폴리오 링크]
+[간단소개]`
+                    )}`}
+                  >
+                    <Mail className="mr-2 h-4 w-4" />
+                    이메일
+                  </a>
+                </Button>
+
+                {/* messenger Q&A */}
+                <Button asChild variant="outline" aria-label="일반 문의 - 메신저로 질문하기">
+                  {/* ✅ pick ONE of the href examples below and replace YOUR_LINK */}
+                  <a href="https://open.kakao.com/o/s9hX4tMh" target="_blank" rel="noreferrer">
+                    <MessageCircle className="mr-2 h-4 w-4" />
+                    카카오톡 문의
+                    <ExternalLink className="ml-2 h-3.5 w-3.5 opacity-80" />
+                  </a>
+                </Button>
+              </div>
             </CardContent>
           </Card>
         </div>
