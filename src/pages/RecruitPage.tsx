@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Input } from '@/components/ui/input'
 import { Mail, Video, Users, Sparkles, Shield, Heart, Gamepad2, ExternalLink, MessageCircle } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
@@ -39,8 +38,6 @@ function Pill({ children }: any) {
 }
 
 export default function RecruitPage() {
-  const [email, setEmail] = useState('')
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted/30 text-foreground">
       {/* Sticky Nav */}
