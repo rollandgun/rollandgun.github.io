@@ -220,9 +220,10 @@ export default function RecruitPage() {
         </div>
       </Section>
 
-      <Section id="hiring" title="디자이너 구인" subtitle="함께 게임의 얼굴과 손맛을 완성할 분들을 모십니다">
+      <Section id="hiring" title="디자이너 구인" subtitle="함께 게임의 얼굴과 손맛을 완성할 분들을 모십니다.">
         <div className='mb-6'>
           <p className="text-sm text-muted-foreground">* 정기적인 급여를 지급하는 채용 공고가 아니며, 현재 개발 초기 단계로 구체적인 보상에 대해 협의할 수 있는 단계는 아닙니다. 보상에 대해서는 추후 기여도를 바탕으로 다시 논의할 예정입니다.</p>
+          <p className="text-sm text-muted-foreground">* 아래 항목들은 제한사항이 아니라 현재 상태에 가까우며, 모든 방향의 개선에 열려있습니다.</p>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
           <Card><CardHeader><CardTitle>UI/UX</CardTitle></CardHeader><CardContent className="text-sm space-y-1">
