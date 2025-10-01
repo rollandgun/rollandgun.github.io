@@ -264,30 +264,35 @@ export default function RecruitPage() {
                 <Button asChild><a href="mailto:rkdrnf@gmail.com?subject=%5B지원%5D%20디자인%20포지션"><Mail className="mr-2 h-4 w-4" />이메일</a></Button>
               </div>
               <p className="text-xs text-muted-foreground">포트폴리오 링크와 포지션을 함께 보내주세요.</p> */}
-              <div className="flex flex-wrap gap-2">
-                {/* email */}
-                <Button asChild aria-label="디자이너 지원 메일 보내기">
-                  <a
-                    href={`mailto:rkdrnf@gmail.com?subject=${encodeURIComponent('[지원] 디자인 포지션')}&body=${encodeURIComponent(
-                      `
+              <div className="flex flex-col flex-wrap gap-2">
+                <div className="flex flex-row items-center gap-4">
+                  {/* email */}
+                  <Button asChild aria-label="디자이너 지원 메일 보내기">
+                    <a
+                      href={`mailto:rkdrnf@gmail.com?subject=${encodeURIComponent('[지원] 디자인 포지션')}&body=${encodeURIComponent(
+                        `
 [포트폴리오 링크]
 [간단소개]`
-                    )}`}
-                  >
-                    <Mail className="mr-2 h-4 w-4" />
-                    이메일
-                  </a>
-                </Button>
-
-                {/* messenger Q&A */}
-                <Button asChild variant="outline" aria-label="일반 문의 - 메신저로 질문하기">
-                  {/* ✅ pick ONE of the href examples below and replace YOUR_LINK */}
-                  <a href="https://open.kakao.com/o/s9hX4tMh" target="_blank" rel="noreferrer">
-                    <MessageCircle className="mr-2 h-4 w-4" />
-                    카카오톡 문의
-                    <ExternalLink className="ml-2 h-3.5 w-3.5 opacity-80" />
-                  </a>
-                </Button>
+                      )}`}
+                    >
+                      <Mail className="mr-2 h-4 w-4" />
+                      이메일
+                    </a>
+                  </Button>
+                  <span className="text-xs">rkdrnf@gmail.com</span>
+                  <span className="text-xs text-muted-foreground">포트폴리오 링크와 간단한 소개를 포함해주세요.</span>
+                </div>
+                <div className="flex flex-row">
+                  {/* messenger Q&A */}
+                  <Button asChild variant="outline" aria-label="일반 문의 - 메신저로 질문하기">
+                    {/* ✅ pick ONE of the href examples below and replace YOUR_LINK */}
+                    <a href="https://open.kakao.com/o/s9hX4tMh" target="_blank" rel="noreferrer">
+                      <MessageCircle className="mr-2 h-4 w-4" />
+                      카카오톡 문의
+                      <ExternalLink className="ml-2 h-3.5 w-3.5 opacity-80" />
+                    </a>
+                  </Button>
+                </div>
               </div>
             </CardContent>
           </Card>
