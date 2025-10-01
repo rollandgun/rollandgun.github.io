@@ -169,7 +169,7 @@ export default function RecruitPage() {
       <Section
         id="timeline"
         title="로드맵 & 마일스톤"
-        subtitle="핵심 기능 → 수익화 → 스팀 출시까지 빠르게 이어갑니다. 그 외 공모전 참여 등도 고려하고 있습니다."
+        subtitle="핵심 기능 → 수익화 → 스팀 출시 순서로 진행합니다. 그 외 공모전 참여 등도 고려하고 있습니다."
       >
         <div className="grid md:grid-cols-4 gap-6 text-sm">
           {/* M1: 팀전 */}
